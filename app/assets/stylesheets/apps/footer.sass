@@ -1,0 +1,12 @@
+footer
+  height: 40px
+  width: 100%
+  .c-centered
+    -webkit-transition: all .5s ease
+    background:  $orange
+    +opacity(1)
+    height: 40px
+    &._start
+      +opacity(0)
+      +transform(rotate(90deg) scale(2))
+      height: 0
