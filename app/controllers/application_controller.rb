@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   def index
-    @Users = User.all
+    #@Users = User.all
   end
 
 end
