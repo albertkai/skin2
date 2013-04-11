@@ -12,6 +12,8 @@ gem 'rabl'
 gem 'oj'
 gem 'gon'
 
+
+gem 'sqlite3', :group => [:development, :test]
 group :development do
   gem 'guard-livereload'
   gem 'rb-fsevent', '~> 0.9'
