@@ -5,15 +5,19 @@ gem 'rails', '3.2.12'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'postgres'
-
 gem 'json'
 gem 'rabl'
 gem 'oj'
 gem 'gon'
 
+group :development, :test do
+  gem 'sqlite3'
+end
 
-gem 'sqlite3', :group => [:development, :test]
+group :production do
+  gem 'pg'
+end
+
 group :development do
   gem 'guard-livereload'
   gem 'rb-fsevent', '~> 0.9'
