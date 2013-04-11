@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
 
   def index
     @Users = User.all
-    #gon.rabl "app/views/users/show.rabl", as: "Users"
   end
 
 end
