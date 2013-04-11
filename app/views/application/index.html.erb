@@ -1,10 +1,15 @@
-<header></header>
-<div class="c-centered"></div>
+<div id="wrap">
+    <header></header>
+    <div class="c-centered"></div>
+    <div id="push"></div>
+</div>
 <footer></footer>
 <%= javascript_tag do %>
 
    (function(){
-      Skin.start()
+      Skin.start({
+        currentUser: gon.current_user
+        });
    })();
 
 <% end %>

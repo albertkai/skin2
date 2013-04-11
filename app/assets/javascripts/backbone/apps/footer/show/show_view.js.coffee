@@ -13,3 +13,4 @@
       setTimeout =>
         $(@.el).removeClass '_start'
       , 0
+

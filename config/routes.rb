@@ -1,4 +1,7 @@
 Skin::Application.routes.draw do
+
+   resource :users
+   resource :admins
    root :to => "application#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
