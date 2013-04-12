@@ -1,1 +1,103 @@
-<h1>This is admin folder</h1>
+<div class="admin">
+    <section class="header">
+        <div class="c-centered">
+            <span>SKIN<sup>2</sup></span>admin panel
+        </div>
+    </section>
+
+    <div class="c-centered">
+
+        <h2>P R I N T S
+            <select name="choose-cat" id="choose-cat-search">
+                <option value="">All</option>
+                <option value="">Nature</option>
+                <option value="">Art</option>
+                <option value="">Icons</option>
+                <option value="">Black & White</option>
+            </select>
+            <div class="add-print">Add print <span>+</span></div>
+        </h2>
+
+        <section class="prints">
+            <div class="item">
+                <h4>Moon in six pence</h4>
+                <img src="/assets/tmp/print.jpg" alt="">
+                <button class="edit">Edit</button>
+                <button class="delete">X</button>
+            </div>
+            <div class="item">
+                <h4>Moon in six pence</h4>
+                <img src="/assets/tmp/print.jpg" alt="">
+                <button class="edit">Edit</button>
+                <button class="delete">X</button>
+            </div>
+            <div class="item">
+                <h4>Moon in six pence</h4>
+                <img src="/assets/tmp/print.jpg" alt="">
+                <button class="edit">Edit</button>
+                <button class="delete">X</button>
+            </div>
+            <div class="item">
+                <h4>Moon in six pence</h4>
+                <img src="/assets/tmp/print.jpg" alt="">
+                <button class="edit">Edit</button>
+                <button class="delete">X</button>
+            </div>
+            <div class="item">
+                <h4>Moon in six pence</h4>
+                <img src="/assets/tmp/print.jpg" alt="">
+                <button class="edit">Edit</button>
+                <button class="delete">X</button>
+            </div>
+        </section>
+
+        <h2>O R D E R S</h2>
+
+        <section class="purchases">
+            <table>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </section>
+
+
+        <div class="modal edit-print">
+
+            <form id="edit-print-form" action="">
+
+                <input type="text" class="required" name="cat" class="autocomplete">
+                <input type="text" class="required" name="name" placeholder="Prit name">
+                <input type="text" name="desc" placeholder="Prit desc">
+                <input type="submit" value="Edit">
+
+            </form>
+
+        </div>
+
+        <div class="modal add-print">
+
+            <form id="add-print-form" action="">
+
+                <input type="file" class="required" name="print">
+                <input type="text" class="required" name="cat" class="autocomplete">
+                <input type="text" class="required" name="name" placeholder="Prit name">
+                <input type="text" name="desc" placeholder="Prit desc">
+                <input type="submit" value="Edit">
+
+            </form>
+
+        </div>
+
+    </div>
+</div>
+
