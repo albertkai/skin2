@@ -1,0 +1,1 @@
+(function(){this.Skin.module("FooterApp",function(t){var o;return this.startWithParent=!1,o={showFooter:function(){return t.Show.Controller.showFooter()}},t.on("start",function(){return o.showFooter()})})}).call(this);

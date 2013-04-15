@@ -1,0 +1,1 @@
+(function(){this.Skin.module("Entities",function(){})}).call(this);

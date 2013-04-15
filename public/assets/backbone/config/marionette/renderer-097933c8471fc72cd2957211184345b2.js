@@ -1,0 +1,1 @@
+(function(){Backbone.Marionette.Renderer.render=function(e,n){var r;if(r=JST["backbone/apps/"+e],!r)throw"Theres no such template: "+e;return r(n)}}).call(this);

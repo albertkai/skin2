@@ -1,0 +1,1 @@
+(function(){this.Skin.module("FooterApp.Show",function(o,t){return o.Controller={showFooter:function(){var o;return o=this.getFooterView(),t.footer.show(o)},getFooterView:function(){return new o.Footer}}})}).call(this);
