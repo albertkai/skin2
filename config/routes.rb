@@ -2,6 +2,8 @@ Skin::Application.routes.draw do
 
    resource :users
    resource :admins
+   resource :prints
+   match "prints/update" => "prints#update"
    root :to => "application#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.

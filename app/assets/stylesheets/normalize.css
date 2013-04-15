@@ -23,6 +23,9 @@ summary {
     display: block;
 }
 
+*:focus {
+    outline: none;
+}
 /**
  * Correct `inline-block` display not defined in IE 8/9.
  */

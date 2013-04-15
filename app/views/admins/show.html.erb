@@ -15,38 +15,38 @@
                 <option value="">Icons</option>
                 <option value="">Black & White</option>
             </select>
-            <div class="add-print">Add print <span>+</span></div>
+            <div class="add-print _modal-open" data-target="add-print">Add print <span>+</span></div>
         </h2>
 
         <section class="prints">
             <div class="item">
                 <h4>Moon in six pence</h4>
                 <img src="/assets/tmp/print.jpg" alt="">
-                <button class="edit">Edit</button>
+                <button class="edit _modal-open" data-target="edit-print">Edit</button>
                 <button class="delete">X</button>
             </div>
             <div class="item">
                 <h4>Moon in six pence</h4>
                 <img src="/assets/tmp/print.jpg" alt="">
-                <button class="edit">Edit</button>
+                <button class="edit _modal-open" data-target="edit-print">Edit</button>
                 <button class="delete">X</button>
             </div>
             <div class="item">
                 <h4>Moon in six pence</h4>
                 <img src="/assets/tmp/print.jpg" alt="">
-                <button class="edit">Edit</button>
+                <button class="edit _modal-open" data-target="edit-print">Edit</button>
                 <button class="delete">X</button>
             </div>
             <div class="item">
                 <h4>Moon in six pence</h4>
                 <img src="/assets/tmp/print.jpg" alt="">
-                <button class="edit">Edit</button>
+                <button class="edit _modal-open">Edit</button>
                 <button class="delete">X</button>
             </div>
             <div class="item">
                 <h4>Moon in six pence</h4>
                 <img src="/assets/tmp/print.jpg" alt="">
-                <button class="edit">Edit</button>
+                <button class="edit _modal-open">Edit</button>
                 <button class="delete">X</button>
             </div>
         </section>
@@ -71,33 +71,65 @@
         </section>
 
 
-        <div class="modal edit-print">
+        <div id="edit-print" class="modal _closed">
 
-            <form id="edit-print-form" action="">
+            <button class="close"></button>
 
-                <input type="text" class="required" name="cat" class="autocomplete">
-                <input type="text" class="required" name="name" placeholder="Prit name">
-                <input type="text" name="desc" placeholder="Prit desc">
+            <form id="add-print-form" action="/prints" method="post">
+
+                <input type="text" class="required" name="name" placeholder="Prit name"><br>
+                <input type="text" class="required" name="cat" list="cat-list" placeholder="Category"><br>
+                <!--<input type="file" class="required" name="print">-->
+                <textarea name="desc" cols="30" rows="10" placeholder="Description"></textarea><br>
                 <input type="submit" value="Edit">
 
             </form>
 
         </div>
 
-        <div class="modal add-print">
+        <div id="add-print" class="modal _closed">
 
-            <form id="add-print-form" action="">
+            <button class="close"></button>
 
-                <input type="file" class="required" name="print">
-                <input type="text" class="required" name="cat" class="autocomplete">
-                <input type="text" class="required" name="name" placeholder="Prit name">
-                <input type="text" name="desc" placeholder="Prit desc">
-                <input type="submit" value="Edit">
+            <form id="edit-print-form" action="/prints/update">
+
+                <input type="hidden" name="id" value="5">
+                <input type="text" class="required" name="name" placeholder="Name"><br>
+                <input type="text" class="required" name="cat" list="cat-list" placeholder="Category"><br>
+                <textarea name="desc" cols="30" rows="10" placeholder="Description"></textarea><br>
+                <input type="submit" value="Add">
 
             </form>
 
         </div>
+
+        <datalist id="cat-list">
+            <option value="Jimi Hendrix">Jimi Hendrix</option>
+            <option value="James Hetfield">James Hetfield</option>
+            <option value="Eric Clapton">Eric Clapton</option>
+            <option value="Eddie Van Halen">Eddie Van Halen</option>
+        </datalist>
 
     </div>
+
+  <script type="text/javascript">
+    $('form').validate({
+        errorClass: 'el_invalid',
+        validClass: 'el_valid'
+    });
+    $('form').ajaxForm({
+       success: function(data){
+           if(data.status === 'true')   {
+               $.jGrowl('Принт сохранен!', {theme: 'success'});
+           }else if(data.status === 'false'){
+               $.jGrowl(data.data, {theme: 'error'});
+           }
+       }  ,
+       error: function(){
+           $.jGrowl('Творится какая-то хуйня!', {theme: 'error'});
+       }
+    });
+  </script>
 </div>
+
 
