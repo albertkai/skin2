@@ -2,7 +2,7 @@
 
 .modal._closed{
     opacity:0;
-    top: -500px; !important;
+    top: -100%;
     transition: all 0.5s easeInOutBack;
     -moz-transition: all 0.5s easeInOutBack;
     -webkit-transition: all 0.5s easeInOutBack;
@@ -10,6 +10,7 @@
 }
 .modal._opened{
     display:block;
+    top: 10%;
 }
 
 

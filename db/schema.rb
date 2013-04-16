@@ -11,14 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130412200831) do
+ActiveRecord::Schema.define(:version => 20130415150725) do
 
   create_table "prints", :force => true do |t|
     t.string   "name"
     t.text     "description"
     t.text     "cat"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "print_file_name"
+    t.string   "print_content_type"
+    t.integer  "print_file_size"
+    t.datetime "print_updated_at"
   end
 
   create_table "users", :force => true do |t|

@@ -1,3 +1,3 @@
 collection @Prints
 
-attributes :id, :name, :description, :cat, :created_at, :updated_at
+attributes :id, :name, :description, :cat, :print_file_name

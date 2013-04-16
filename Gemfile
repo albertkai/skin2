@@ -11,6 +11,7 @@ gem 'json'
 gem 'rabl'
 gem 'oj'
 gem 'gon'
+gem "paperclip", "~> 3.0"
 
 group :development, :test do
   gem 'sqlite3'

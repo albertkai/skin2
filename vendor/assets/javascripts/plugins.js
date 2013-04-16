@@ -927,44 +927,49 @@ Modernizr.load=function(){yepnope.apply(window,[].slice.call(arguments,0));};
 $(function(){
     if($('.modal').length > 0 && $('._modal-open').length > 0){
         var $trigger = $('._modal-open'),
-            $close = $('.modal > .close'),
+            $close = $('.modal .close'),
             $all_modals = $('.modal'),
             $overlay = $('#overlay');
-        $trigger.on('click', function(e){
-            console.log('Modal is opened');
-            var target = $(e.target).data('target'),
-                $modal = $('#' + target);
-            $modal.removeClass('_closed');
-            $modal.addClass('_opened').trigger('modal:opened');
-            $modal.css('left', ($(window).width() - $modal.width())/2 + 'px');
-            $('#overlay').addClass('_show');
-            $modal.css('top', ($(window).height() - $modal.height())/2 + 'px');
+        $('body').on('click', '._modal-open', function(e){
+            modalOpen(e);
         });
-        $close.on('click', function(e){
-            $all_modals.removeClass('_opened');
-            $all_modals.addClass('_closed');
-            $('#overlay').removeClass('_show');
-
+        $('.modal .close, #overlay').on('click', function(e){
+            modalClose(e);
         });
-        $overlay.on('click', function(){
-            $(this).removeClass('_show');
-            $all_modals.removeClass('_opened');
-            $all_modals.addClass('_closed')  ;
-        });
-        $('.modal._opened').on('window:resize', function(){
-            console.log('yo');
-            $(this).css('left', ($(window).width() - $modal.width())/2 + 'px');
-            $(this).css('top', ($(window).height() - $modal.height())/2 + 'px');
-        })
 
     }
-    $(window).on('resize', function () {
-        $.event.trigger({
-            type: "window:resize",
-            message: "Hello World!",
-            time: new Date()
-        })
-    })
+
+    var modalClose = function(e){
+        $all_modals.removeClass('_opened');
+        $all_modals.addClass('_closed');
+        setTimeout(function(){
+           $all_modals.find('.body').empty();
+        }, 500);
+        $('#overlay').removeClass('_show');
+        console.log('closed');
+    };
+
+    var modalOpen = function(e){
+        var target = $(e.target).data('target'),
+            $modal = $('#' + target);
+        $modal.removeClass('_closed');
+        $modal.addClass('_opened');
+        $('#overlay').addClass('_show');
+        console.log('Modal is opened');
+        if($modal.data('tmpl') === true){
+            var html = $('#_' + target).html();
+            console.log(html)
+            $modal.find('.body').append(html);
+        }else if(typeof $modal.data('fetch') !== 'undefined'){
+            var param = $(e.target).data('param');
+            var path = $modal.data('fetch').replace(':param', param);
+            var html = $('#_' + target).html();
+            $.get(path, function(data){
+                var markup = _.template(html, data);
+                $modal.find('.body').append(markup);
+            });
+        }
+    };
 });
 
 

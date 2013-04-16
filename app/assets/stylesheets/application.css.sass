@@ -36,7 +36,6 @@ h1, h2, h3, h4, h5, h6, p, a, span, i
   margin: 0 auto
 
 .modal
-  position: absolute
   background: white
   padding: 40px
   width: auto
@@ -45,7 +44,14 @@ h1, h2, h3, h4, h5, h6, p, a, span, i
   z-index: 101
   +border-radius(2px)
   +box-shadow(#ccc 0 0 7px)
-  +transition(top 0.5s  cubic-bezier(0.905, -0.445, 0.200, 1.650))
+  +transition(all 0.5s  cubic-bezier(0.905, -0.445, 0.200, 1.650))
+  position: fixed
+  left: 50%
+  margin-left: -155px
+  +border-radius(6px)
+  +box-shadow(0 3px 7px rgba(0,0,0,0.3))
+  +background-clip(padding-box)
+  outline: none
   .close
     position: absolute
     width: 18px
@@ -77,6 +83,7 @@ input[type="text"]
   font-weight: 100
   color: #333
   border: 1px solid #ccc
+  +border-radius(3px)
   padding-left: 7px
   margin-bottom: 10px
 input[type="submit"]
@@ -86,6 +93,7 @@ input[type="submit"]
   color: white
   border: 0
   background: #8b77ff
+  +border-radius(3px)
   &:hover
     background: #5bccff
 textarea
@@ -96,7 +104,7 @@ textarea
   padding-left: 7px
   resize: none
   margin-bottom: 10px
-
+  +border-radius(3px)
 
 
 /* Visuals */

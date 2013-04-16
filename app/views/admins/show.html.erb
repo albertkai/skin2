@@ -9,11 +9,11 @@
 
         <h2>P R I N T S
             <select name="choose-cat" id="choose-cat-search">
-                <option value="">All</option>
-                <option value="">Nature</option>
-                <option value="">Art</option>
-                <option value="">Icons</option>
-                <option value="">Black & White</option>
+                <option value="All">All</option>
+                <option value="Nature">Nature</option>
+                <option value="Art">Art</option>
+                <option value="Icons">Icons</option>
+                <option value="Black & White">Black & White</option>
             </select>
             <div class="add-print _modal-open" data-target="add-print">Add print <span>+</span></div>
         </h2>
@@ -22,31 +22,31 @@
             <div class="item">
                 <h4>Moon in six pence</h4>
                 <img src="/assets/tmp/print.jpg" alt="">
-                <button class="edit _modal-open" data-target="edit-print">Edit</button>
+                <button class="edit _modal-open" data-target="edit-print" data-param="45">Edit</button>
                 <button class="delete">X</button>
             </div>
             <div class="item">
                 <h4>Moon in six pence</h4>
                 <img src="/assets/tmp/print.jpg" alt="">
-                <button class="edit _modal-open" data-target="edit-print">Edit</button>
+                <button class="edit _modal-open" data-target="edit-print" data-param="46">Edit</button>
                 <button class="delete">X</button>
             </div>
             <div class="item">
                 <h4>Moon in six pence</h4>
                 <img src="/assets/tmp/print.jpg" alt="">
-                <button class="edit _modal-open" data-target="edit-print">Edit</button>
+                <button class="edit _modal-open" data-target="edit-print" data-param="47">Edit</button>
                 <button class="delete">X</button>
             </div>
             <div class="item">
                 <h4>Moon in six pence</h4>
                 <img src="/assets/tmp/print.jpg" alt="">
-                <button class="edit _modal-open">Edit</button>
+                <button class="edit _modal-open" data-id="48">Edit</button>
                 <button class="delete">X</button>
             </div>
             <div class="item">
                 <h4>Moon in six pence</h4>
                 <img src="/assets/tmp/print.jpg" alt="">
-                <button class="edit _modal-open">Edit</button>
+                <button class="edit _modal-open" data-id="49">Edit</button>
                 <button class="delete">X</button>
             </div>
         </section>
@@ -71,35 +71,23 @@
         </section>
 
 
-        <div id="edit-print" class="modal _closed">
+        <div id="edit-print" class="modal _closed" data-fetch="/prints/:param.json">
 
             <button class="close"></button>
 
-            <form id="add-print-form" action="/prints" method="post">
+            <div class="body">
 
-                <input type="text" class="required" name="name" placeholder="Prit name"><br>
-                <input type="text" class="required" name="cat" list="cat-list" placeholder="Category"><br>
-                <!--<input type="file" class="required" name="print">-->
-                <textarea name="desc" cols="30" rows="10" placeholder="Description"></textarea><br>
-                <input type="submit" value="Edit">
-
-            </form>
+            </div>
 
         </div>
 
-        <div id="add-print" class="modal _closed">
+        <div id="add-print" class="modal _closed" data-tmpl="true">
 
             <button class="close"></button>
 
-            <form id="edit-print-form" action="/prints/update">
+            <div class="body">
 
-                <input type="hidden" name="id" value="5">
-                <input type="text" class="required" name="name" placeholder="Name"><br>
-                <input type="text" class="required" name="cat" list="cat-list" placeholder="Category"><br>
-                <textarea name="desc" cols="30" rows="10" placeholder="Description"></textarea><br>
-                <input type="submit" value="Add">
-
-            </form>
+            </div>
 
         </div>
 
@@ -112,23 +100,134 @@
 
     </div>
 
+  <script id="_edit-print" type="text/html">
+
+    <img src="/system/prints/{{= id }}/thumb/{{= print_file_name }}" alt=""/>
+
+    <form id="edit-print-form" action="/prints/update" method="post">
+
+      <input type="hidden" name="id" value="{{= id }}">
+      <input type="text" class="required" name="name" placeholder="{{= name }}"><br>
+      <input type="text" class="required" name="cat" list="cat-list" placeholder="{{= cat }}"><br>
+      <textarea name="desc" cols="30" rows="10" placeholder="{{= description }}"></textarea><br>
+      <input type="submit" value="Edit">
+
+    </form>
+
+  </script>
+
+  <script id="_add-print" type="text/html">
+
+  <form id="add-print-form" action="/prints" method="post" enctype="multipart/form-data">
+
+    <input type="text" class="required" name="name" placeholder="Name"><br>
+    <input type="file" class="required" name="print">
+    <input type="text" class="required" name="cat" list="cat-list" placeholder="Category"><br>
+    <textarea name="desc" cols="30" rows="10" placeholder="Description"></textarea><br>
+    <input type="submit" value="Add">
+
+  </form>
+
+  </script>
+
+  <script id="print-item-temp" type="text/html">
+
+    <div class="item" data-id="{{= id }}">
+      <h4>{{= name }}</h4>
+      <img src="/system/prints/{{= id }}/thumb/{{= print_file_name }}" alt="">
+      <button class="edit _modal-open" data-target="edit-print" data-param="{{= id }}">Edit</button>
+      <button class="delete" data-id="{{= id }}">X</button>
+    </div>
+
+</div>
+
+  </script>
+
   <script type="text/javascript">
-    $('form').validate({
-        errorClass: 'el_invalid',
-        validClass: 'el_valid'
-    });
-    $('form').ajaxForm({
-       success: function(data){
-           if(data.status === 'true')   {
-               $.jGrowl('Принт сохранен!', {theme: 'success'});
-           }else if(data.status === 'false'){
-               $.jGrowl(data.data, {theme: 'error'});
-           }
-       }  ,
-       error: function(){
-           $.jGrowl('Творится какая-то хуйня!', {theme: 'error'});
-       }
-    });
+
+
+    var render = function(data){
+        var markup = [];
+        _.each(data, function(d){
+            markup.push(_.template($('#print-item-temp').html(), d));
+        });
+        $('.prints').html(markup.join(''));
+    }
+
+    var getPrints = function(){
+        var markup = [];
+        $.get('/prints.json', function(data){
+            render(data);
+        });
+    };
+
+    var printsCat = function(e){
+        var cat = $(e.target).val();
+        $.get('/prints/cat/' + cat + '.json', function(data){
+            render(data);
+        });
+    }
+
+    var deletePrint = function(e){
+        var target = $(e.target).data('id');
+        $.post('/prints/destroy/' + target, function(data){
+            if(data.status === 'true'){
+                $.jGrowl('Принт удален!', {theme: 'success'});
+            }else{
+                $.jGrowl('Творится какая-то хуйня!', {theme: 'error'});
+            }
+        })
+    }
+
+    $(function(){
+
+        $('.prints').on('click', '.delete', function(e){
+            console.log('fired')
+            deletePrint(e);
+        });
+
+        $('select').on('change', function(e){
+            console.log('fired')
+            printsCat(e);
+        })
+
+        getPrints();
+
+        $('#edit-print-form').validate({
+            errorClass: 'el_invalid',
+            validClass: 'el_valid'
+        });
+        $('#add-print-form').validate({
+            errorClass: 'el_invalid',
+            validClass: 'el_valid'
+        });
+        $('#edit-print-form').ajaxForm({
+            success: function(data){
+                if(data.status === 'true')   {
+                    $.jGrowl('Принт сохранен!', {theme: 'success'});
+                }else if(data.status === 'false'){
+                    $.jGrowl(data.data, {theme: 'error'});
+                }
+            }  ,
+            error: function(){
+                $.jGrowl('Творится какая-то хуйня!', {theme: 'error'});
+            }
+        });
+        $('#add-print-form').ajaxForm({
+            success: function(data){
+                if(data.status === 'true')   {
+                    $.jGrowl('Принт сохранен!', {theme: 'success'});
+                }else if(data.status === 'false'){
+                    $.jGrowl(data.data, {theme: 'error'});
+                }
+            }  ,
+            error: function(){
+                $.jGrowl('Творится какая-то хуйня!', {theme: 'error'});
+            }
+        });
+
+    })
+
   </script>
 </div>
 
