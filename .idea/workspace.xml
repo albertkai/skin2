@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ecbb3fa-bf6a-4b44-a43b-9ce589a04611" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/lib/custom_plugins.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/lib/plugins/plugins.js" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-2519ac2b73162f299e08d260ad019550.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-2519ac2b73162f299e08d260ad019550.css.gz" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-2844ecc1edc9f4ac7abbc6d9d84ab9bc.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-2844ecc1edc9f4ac7abbc6d9d84ab9bc.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-64ce94d02987f3c152794a54bfa8c722.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-64ce94d02987f3c152794a54bfa8c722.js.gz" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-acbe0f8076c6337de4d2725e6d9c90fa.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-acbe0f8076c6337de4d2725e6d9c90fa.js.gz" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-e354e03b62d9a88ae39d8450e34f3d49.css" afterPath="" />
@@ -51,8 +53,10 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/prints/10/medium/new-york-top-of-the-rock-7.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/prints/10/original/new-york-top-of-the-rock-7.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/prints/10/thumb/new-york-top-of-the-rock-7.jpg" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/lib/custom_plugins.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/lib/plugins/custom_plugins.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/assets/stylesheets/plugins.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/plugins.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/javascripts/plugins.js" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/plugins.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
     </list>
     <ignored path="skin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -97,15 +101,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="25" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="prints_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/prints_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -127,16 +122,45 @@
       <file leaf-file-name="production.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="45" selection-start="1795" selection-end="1795" vertical-scroll-proportion="0.0">
+            <state line="49" column="44" selection-start="1899" selection-end="1899" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="plugins.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/plugins.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1366069685000" expanded="true" signature="554:818" placeholder="{...}" />
+                <marker date="1366069685000" expanded="true" signature="845:974" placeholder="{...}" />
+                <marker date="1366069685000" expanded="true" signature="1024:1157" placeholder="{...}" />
+                <marker date="1366069685000" expanded="true" signature="1184:1313" placeholder="{...}" />
+                <marker date="1366069685000" expanded="true" signature="1367:1631" placeholder="{...}" />
+                <marker date="1366069685000" expanded="true" signature="1658:1922" placeholder="{...}" />
+                <marker date="1366069685000" expanded="true" signature="1975:2108" placeholder="{...}" />
+                <marker date="1366069685000" expanded="true" signature="2135:2399" placeholder="{...}" />
+                <marker date="1366069685000" expanded="true" signature="2447:2580" placeholder="{...}" />
+                <marker date="1366069685000" expanded="true" signature="2607:2736" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.css.sass" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="22" selection-start="546" selection-end="546" vertical-scroll-proportion="0.40358743">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="30" selection-start="728" selection-end="728" vertical-scroll-proportion="0.57174885">
+            <state line="17" column="30" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -145,7 +169,18 @@
       <file leaf-file-name="plugins.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/assets/javascripts/plugins.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="922" column="0" selection-start="31691" selection-end="31691" vertical-scroll-proportion="-13.92">
+            <state line="918" column="36" selection-start="0" selection-end="146406" vertical-scroll-proportion="-11.52">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plugins.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/lib/plugins/plugins.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3706" column="0" selection-start="146406" selection-end="146406" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -165,30 +200,12 @@
         </entry>
       </file>
       <file leaf-file-name="custom_plugins.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/lib/custom_plugins.js">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/lib/plugins/custom_plugins.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="48" column="3" selection-start="1616" selection-end="1616" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="prints_mailer.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/mailers/prints_mailer.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="16" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="save_email.text.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/prints_mailer/save_email.text.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -211,7 +228,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/prints/show.json.rabl" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/config/marionette/templates.js" />
         <option value="$PROJECT_DIR$/app/views/prints/getone.json.rabl" />
         <option value="$PROJECT_DIR$/app/views/prints/cat.json.rabl" />
@@ -223,10 +239,11 @@
         <option value="$PROJECT_DIR$/app/views/prints_mailer/save_email.text.erb" />
         <option value="$PROJECT_DIR$/app/mailers/prints_mailer.rb" />
         <option value="$PROJECT_DIR$/app/controllers/prints_controller.rb" />
-        <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/vendor/assets/javascripts/plugins.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/lib/custom_plugins.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/lib/plugins/plugins.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/config/environments/production.rb" />
       </list>
     </option>
   </component>
@@ -310,6 +327,10 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -328,10 +349,6 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -344,24 +361,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="environments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -454,6 +453,10 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -470,10 +473,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -493,6 +492,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/assets/stylesheets" />
+      <recent name="$PROJECT_DIR$/app/assets/javascripts/lib/plugins" />
       <recent name="$PROJECT_DIR$/vendor/assets/javascripts" />
       <recent name="$PROJECT_DIR$/vendor/assets" />
     </key>
@@ -638,27 +639,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/config/marionette/renderer.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/prints/show.json.rabl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="20" selection-start="18" selection-end="18" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/prints/getone.json.rabl">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="75" vertical-scroll-proportion="-0.0">
@@ -715,13 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="45" selection-start="1795" selection-end="1795" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/lib/underscore.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -731,16 +704,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/assets/javascripts/plugins.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="922" column="0" selection-start="31691" selection-end="31691" vertical-scroll-proportion="-13.92">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/lib/custom_plugins.js">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/lib/plugins/custom_plugins.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="3" selection-start="1616" selection-end="1616" vertical-scroll-proportion="0.0">
           <folding>
@@ -749,9 +713,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/assets/javascripts/plugins.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="918" column="36" selection-start="0" selection-end="146406" vertical-scroll-proportion="-11.52">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/lib/plugins/plugins.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3706" column="0" selection-start="146406" selection-end="146406" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="30" selection-start="728" selection-end="728" vertical-scroll-proportion="0.57174885">
+        <state line="17" column="30" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="44" selection-start="1899" selection-end="1899" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/plugins.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1366069685000" expanded="true" signature="554:818" placeholder="{...}" />
+            <marker date="1366069685000" expanded="true" signature="845:974" placeholder="{...}" />
+            <marker date="1366069685000" expanded="true" signature="1024:1157" placeholder="{...}" />
+            <marker date="1366069685000" expanded="true" signature="1184:1313" placeholder="{...}" />
+            <marker date="1366069685000" expanded="true" signature="1367:1631" placeholder="{...}" />
+            <marker date="1366069685000" expanded="true" signature="1658:1922" placeholder="{...}" />
+            <marker date="1366069685000" expanded="true" signature="1975:2108" placeholder="{...}" />
+            <marker date="1366069685000" expanded="true" signature="2135:2399" placeholder="{...}" />
+            <marker date="1366069685000" expanded="true" signature="2447:2580" placeholder="{...}" />
+            <marker date="1366069685000" expanded="true" signature="2607:2736" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="22" selection-start="546" selection-end="546" vertical-scroll-proportion="0.40358743">
           <folding />
         </state>
       </provider>
