@@ -1,0 +1,1 @@
+(function(){this.Skin.module("HeaderApp.List",function(e,t){return e.Controller={listHeader:function(){var e,n;return n=t.request("header:entities"),e=this.getHeaderView(n),t.header.show(e)},getHeaderView:function(t){return console.log("yep"),new e.Headers({collection:t})}}})}).call(this);

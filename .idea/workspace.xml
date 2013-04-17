@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ecbb3fa-bf6a-4b44-a43b-9ce589a04611" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/lib/plugins/plugins.js" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-2519ac2b73162f299e08d260ad019550.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-2519ac2b73162f299e08d260ad019550.css.gz" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-2844ecc1edc9f4ac7abbc6d9d84ab9bc.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-2844ecc1edc9f4ac7abbc6d9d84ab9bc.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-3359ad13e6cc0833c55a0471e9e12a06.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-3359ad13e6cc0833c55a0471e9e12a06.js.gz" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-64ce94d02987f3c152794a54bfa8c722.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-64ce94d02987f3c152794a54bfa8c722.js.gz" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-acbe0f8076c6337de4d2725e6d9c90fa.js" afterPath="" />
@@ -46,6 +47,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jquery.min.map" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/large_leather.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/lib/custom_plugins-2f6d2253cf58b552e173fc687affe251.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/lib/custom_plugins-2f6d2253cf58b552e173fc687affe251.js.gz" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/manifest.yml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/rails.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/tmp/print-b6fdbc74b4c83a3169810443519cb577.jpg" afterPath="" />
@@ -53,10 +56,13 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/prints/10/medium/new-york-top-of-the-rock-7.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/prints/10/original/new-york-top-of-the-rock-7.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/prints/10/thumb/new-york-top-of-the-rock-7.jpg" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/lib/custom_plugins.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/lib/plugins/custom_plugins.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/assets/stylesheets/plugins.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/plugins.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/prints/16/medium/375539_otrazhatelnaya-tumannost_golova_5112x3408_(www.GdeFon.ru).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/prints/16/original/375539_otrazhatelnaya-tumannost_golova_5112x3408_(www.GdeFon.ru).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/prints/16/thumb/375539_otrazhatelnaya-tumannost_golova_5112x3408_(www.GdeFon.ru).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/prints/9/medium/My_beautiful_Spring_by_littl3fairy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/prints/9/original/My_beautiful_Spring_by_littl3fairy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/prints/9/thumb/My_beautiful_Spring_by_littl3fairy.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
     </list>
     <ignored path="skin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -101,15 +107,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="prints_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/prints_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="8" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="development.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -122,7 +119,16 @@
       <file leaf-file-name="production.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="44" selection-start="1899" selection-end="1899" vertical-scroll-proportion="0.0">
+            <state line="16" column="15" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/application.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="32" selection-start="2797" selection-end="2797" vertical-scroll-proportion="0.764574">
               <folding />
             </state>
           </provider>
@@ -148,10 +154,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.css.sass" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application.css.sass" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="22" selection-start="546" selection-end="546" vertical-scroll-proportion="0.40358743">
+            <state line="12" column="22" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -228,7 +234,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/config/marionette/templates.js" />
         <option value="$PROJECT_DIR$/app/views/prints/getone.json.rabl" />
         <option value="$PROJECT_DIR$/app/views/prints/cat.json.rabl" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
@@ -244,6 +249,7 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/lib/plugins/plugins.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
+        <option value="$PROJECT_DIR$/config/application.rb" />
       </list>
     </option>
   </component>
@@ -374,33 +380,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prints_mailer" />
+              <option name="myItemId" value="environments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -433,46 +417,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="mailers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -639,13 +583,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/prints/getone.json.rabl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="75" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/prints/cat.json.rabl">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="10" selection-start="10" selection-end="10" vertical-scroll-proportion="0.0">
@@ -738,13 +675,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="44" selection-start="1899" selection-end="1899" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/plugins.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -765,7 +695,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="22" selection-start="546" selection-end="546" vertical-scroll-proportion="0.40358743">
+        <state line="12" column="22" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="15" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="32" selection-start="2797" selection-end="2797" vertical-scroll-proportion="0.764574">
           <folding />
         </state>
       </provider>
