@@ -42,19 +42,21 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/backbone/entities/user-36c2f0192b70a79bcc037fae5ca88d99.js.gz" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/jquery.min.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/large_leather-3f02974bb382a2ad5174ffb935160ac9.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/large_leather.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/lib/backbone-dc0506677b2a63e07a7f112ad419ba59.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/lib/backbone-dc0506677b2a63e07a7f112ad419ba59.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/lib/marionette-0909e79cfcfa8f140ad37ab6b8d6c01c.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/lib/marionette-0909e79cfcfa8f140ad37ab6b8d6c01c.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/lib/underscore-3cfa1cede345cfe5f39f646e03aedffe.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/lib/underscore-3cfa1cede345cfe5f39f646e03aedffe.js.gz" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/manifest.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/rails-a3386665c05a2d82f711a4aaa72d247c.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/rails.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/tmp/print-b6fdbc74b4c83a3169810443519cb577.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/tmp/print.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/prints/10/medium/new-york-top-of-the-rock-7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/prints/10/original/new-york-top-of-the-rock-7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/prints/10/thumb/new-york-top-of-the-rock-7.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-64ce94d02987f3c152794a54bfa8c722.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-64ce94d02987f3c152794a54bfa8c722.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-ae5fcd534c431e9bd0fcb7a68c51022f.css.gz" afterPath="$PROJECT_DIR$/public/assets/application-ae5fcd534c431e9bd0fcb7a68c51022f.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/lib/backbone-dc0506677b2a63e07a7f112ad419ba59.js.gz" afterPath="$PROJECT_DIR$/public/assets/lib/backbone-dc0506677b2a63e07a7f112ad419ba59.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/lib/marionette-0909e79cfcfa8f140ad37ab6b8d6c01c.js.gz" afterPath="$PROJECT_DIR$/public/assets/lib/marionette-0909e79cfcfa8f140ad37ab6b8d6c01c.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/lib/underscore-3cfa1cede345cfe5f39f646e03aedffe.js.gz" afterPath="$PROJECT_DIR$/public/assets/lib/underscore-3cfa1cede345cfe5f39f646e03aedffe.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="skin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,6 +81,7 @@
     <file path="/print-saved.text.erb" changelist="7ecbb3fa-bf6a-4b44-a43b-9ce589a04611" time="1366153569211" ignored="false" />
     <file path="/save_email.html.erb" changelist="7ecbb3fa-bf6a-4b44-a43b-9ce589a04611" time="1366154047504" ignored="false" />
     <file path="/save_email.text.erb" changelist="7ecbb3fa-bf6a-4b44-a43b-9ce589a04611" time="1366154104446" ignored="false" />
+    <file path="/production.rb" changelist="7ecbb3fa-bf6a-4b44-a43b-9ce589a04611" time="1366191109950" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +140,7 @@
       <file leaf-file-name="production.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="34" selection-start="742" selection-end="742" vertical-scroll-proportion="0.5044843">
+            <state line="49" column="68" selection-start="1923" selection-end="1923" vertical-scroll-proportion="0.36995515">
               <folding />
             </state>
           </provider>
@@ -206,7 +209,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/vendor/assets/stylesheets/plugins.css" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.sass" />
         <option value="$PROJECT_DIR$/app/views/prints/show.json.rabl" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/backbone/config/marionette/templates.js" />
@@ -222,6 +224,7 @@
         <option value="$PROJECT_DIR$/app/views/prints_mailer/save_email.text.erb" />
         <option value="$PROJECT_DIR$/app/mailers/prints_mailer.rb" />
         <option value="$PROJECT_DIR$/app/controllers/prints_controller.rb" />
+        <option value="$PROJECT_DIR$/config/environments/production.rb" />
       </list>
     </option>
   </component>
@@ -666,7 +669,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="34" selection-start="742" selection-end="742" vertical-scroll-proportion="0.5044843">
+        <state line="49" column="68" selection-start="1923" selection-end="1923" vertical-scroll-proportion="0.36995515">
           <folding />
         </state>
       </provider>
