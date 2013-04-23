@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ecbb3fa-bf6a-4b44-a43b-9ce589a04611" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/customizr/customizr_app.js.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/customizr/main_layout.js.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/customizr/templates/main_layout.jst.eco" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/customizr/router.js.coffee" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/header/list/templates/_header.jst.eco" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-0815b3d7b37c0986b3f9fbefb78cd8b4.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-0815b3d7b37c0986b3f9fbefb78cd8b4.js.gz" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-2519ac2b73162f299e08d260ad019550.css" afterPath="" />
@@ -120,23 +114,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/tmp/print-b6fdbc74b4c83a3169810443519cb577.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/tmp/print.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/assets/javascripts/plugins.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/header/list/templates/list_header.jst.eco" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/header/list/templates/header.jst.eco" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/prints/cat.json.rabl" afterPath="$PROJECT_DIR$/app/views/prints/list.json.rabl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/apps/admin.css.sass" afterPath="$PROJECT_DIR$/app/assets/stylesheets/apps/admin.css.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/app.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/app.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.sass" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/lib/plugins/custom_plugins.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/lib/plugins/custom_plugins.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/application/index.html.erb" afterPath="$PROJECT_DIR$/app/views/application/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/header/list/list_controller.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/header/list/list_controller.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/plugins.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/plugins.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/print.rb" afterPath="$PROJECT_DIR$/app/models/print.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/prints_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/prints_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admins/show.html.erb" afterPath="$PROJECT_DIR$/app/views/admins/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/footer/show/show_view.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/backbone/apps/footer/show/show_view.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="skin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -194,15 +171,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main_layout.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/customizr/main_layout.js.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="55" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/application/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
@@ -248,10 +216,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show_view.js.coffee" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="show_view.js.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/footer/show/show_view.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="21" selection-start="282" selection-end="282" vertical-scroll-proportion="0.23041475">
+            <state line="10" column="21" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js.coffee" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/app.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="11" selection-start="333" selection-end="333" vertical-scroll-proportion="0.3686636">
               <folding />
             </state>
           </provider>
@@ -736,13 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/app.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="5" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/customizr/templates/main_layout.jst.eco">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="31" selection-start="31" selection-end="31" vertical-scroll-proportion="0.0">
@@ -836,7 +806,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/apps/footer/show/show_view.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="21" selection-start="282" selection-end="282" vertical-scroll-proportion="0.23041475">
+        <state line="10" column="21" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/backbone/app.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="11" selection-start="333" selection-end="333" vertical-scroll-proportion="0.3686636">
           <folding />
         </state>
       </provider>

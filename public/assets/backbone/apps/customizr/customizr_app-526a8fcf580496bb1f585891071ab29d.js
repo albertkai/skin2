@@ -1,0 +1,1 @@
+(function(){this.Skin.module("CustomizrApp",function(n,o){return n.controller={showCustomizr:function(){var t;return t=new n.MainLayout,console.log(t),o.main.show(t)}}})}).call(this);
