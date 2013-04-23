@@ -11,6 +11,7 @@
 
 @import 'compass'
 @import 'plugins.css'
+@import 'bootstrap'
 @import 'normalize.css'
 @import 'skins/milk.sass'
 
@@ -29,11 +30,91 @@ h1, h2, h3, h4, h5, h6, p, a, span, i
   color: #666
   margin: 0
 
+header
+  height: 60px
+  border-bottom: 1px solid grey
+  line-height: 60px
+  background: white
+  opacity: .8
+  #logo
+    width: 300px
+    font-size: 25px
+    letter-spacing: 13px
+
 /*Common elements*/
 
 .c-centered
   width: 1000px
   margin: 0 auto
+
+.c-color
+  width: 105px
+  height: 18px
+  background: orange
+  &#white
+    background-color: rgb(254,255,255)
+    +filter-gradient(#feffff, #e0e0e0, horizontal)
+    +background-image(linear-gradient(left,  rgba(254,255,255,1) 0%,rgba(224,224,224,1) 100%))
+  &#grey
+    background-color: rgb(196,196,196)
+    +filter-gradient(#c4c4c4, #606060, horizontal)
+    +background-image(linear-gradient(left,  rgba(196,196,196,1) 0%,rgba(96,96,96,1) 100%))
+  &#black
+    background-color: rgb(89,89,89)
+    +filter-gradient(#595959, #000000, horizontal)
+    +background-image(linear-gradient(left,  rgba(89,89,89,1) 0%,rgba(0,0,0,1) 100%))
+  &#yellow
+    background-color: rgb(239,252,55)
+    +filter-gradient(#effc37, #ffbd3a, horizontal)
+    +background-image(linear-gradient(left,  rgba(239,252,55,1) 0%,rgba(255,189,58,1) 100%))
+
+  &#orange
+    background-color: rgb(255,215,84)
+    +filter-gradient(#ffd754, #ff7b00, horizontal)
+    +background-image(linear-gradient(left,  rgba(255,215,84,1) 0%,rgba(255,123,0,1) 100%))
+
+  &#red
+    background-color: rgb(255,29,0)
+    +filter-gradient(#ff1d00, #a00000, horizontal)
+    +background-image(linear-gradient(left,  rgba(255,29,0,1) 0%,rgba(160,0,0,1) 100%))
+  &#green
+    background-color: rgb(85,234,39)
+    +filter-gradient(#55ea27, #009311, horizontal)
+    +background-image(linear-gradient(left,  rgba(85,234,39,1) 0%,rgba(0,147,17,1) 100%))
+  &#blue
+    background-color: rgb(100,212,252)
+    +filter-gradient(#64d4fc, #1455e2, horizontal)
+    +background-image(linear-gradient(left,  rgba(100,212,252,1) 0%,rgba(20,85,226,1) 100%))
+  &#violet
+    background-color: rgb(229,112,231)
+    +filter-gradient(#e570e7, #5e6ed6, horizontal)
+    +background-image(linear-gradient(left,  rgba(229,112,231,1) 0%,rgba(94,110,214,1) 100%))
+  &#pink
+    background-color: rgb(255,211,211)
+    +filter-gradient(#ffd3d3, #ff7c7c, horizontal)
+    +background-image(linear-gradient(left,  rgba(255,211,211,1) 0%,rgba(255,124,124,1) 100%))
+  &#cream
+    background-color: rgb(254,252,234)
+    +filter-gradient(#fefcea, #ffea84, horizontal)
+    +background-image(linear-gradient(left,  rgba(254,252,234,1) 0%,rgba(255,234,132,1) 100%))
+  &#brown
+    background-color: rgb(142,89,39)
+    +filter-gradient(#8e5927, #261010, horizontal)
+    +background-image(linear-gradient(left,  rgba(142,89,39,1) 0%,rgba(38,16,16,1) 100%))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .modal
   background: white
@@ -111,6 +192,23 @@ textarea
 
 .blured
   +filter(blur(10px))
+
+
+
+
+/*Helpers*/
+
+.h-no-margin-right
+  margin-right: 0 !important
+.h-no-margin-top
+  margin-top: 0 !important
+.h-no-margin-bottom
+  margin-bottom: 0 !important
+.h-no-margin-left
+  margin-left: 0 !important
+.h-no-margin
+  margin: 0 !important
+
 
 /* Validation */
 

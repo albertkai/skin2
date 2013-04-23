@@ -6,7 +6,8 @@ Skin::Application.routes.draw do
    match "prints/update" => "prints#update"
    match "prints/destroy/:id" => "prints#destroy"
    match "prints/:id" => "prints#getone"
-   match "prints/cat/:cat" => "prints#cat"
+   match "prints/cat/getcat" => "prints#getcats"
+   match "prints/list/:cat/:primary_color" => "prints#list"
    root :to => "application#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.

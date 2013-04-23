@@ -1,16 +1,13 @@
-yoyoo
 <div id="wrap">
     <header></header>
-    <div class="c-centered"></div>
+    <div id="main" class="c-centered"></div>
     <div id="push"></div>
 </div>
-<footer>yoyoyo</footer>
+<footer></footer>
 <%= javascript_tag do %>
 
    (function(){
-      Skin.start({
-        currentUser: gon.current_user
-        });
+      Skin.start();
    })();
 
 <% end %>

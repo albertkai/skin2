@@ -11,7 +11,6 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require plugins
 //= require lib/underscore
 //= require lib/backbone
 //= require lib/marionette

@@ -14,6 +14,88 @@
 }
 
 
+/*Dropdown*/
+
+.dropdown{
+    display: block;
+    float: left;
+    position: relative;
+    margin-right: 20px;
+    font-size: 16px;
+    color: #666;
+    background: white;
+    width: 150px;
+    z-index: 50;
+}
+.dropdown.small{
+    width: 140px;
+}
+.dropdown.huge{
+    width:170px;
+}
+.dropdown .current{
+    padding: 7px 13px;
+    height: 18px;
+}
+.dropdown .current i{
+    border-top: 6px solid;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    position: absolute;
+    right: 9px;
+    top: 13px;
+}
+.dropdown .current .caret{
+    width: 38px;
+    height: 100%;
+    position: absolute;
+    background: white;
+    top: 0px;
+    right: 0px;
+    background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 97%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(61%,rgba(255,255,255,1)), color-stop(97%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 61%,rgba(255,255,255,1) 97%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 61%,rgba(255,255,255,1) 97%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 61%,rgba(255,255,255,1) 97%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 61%,rgba(255,255,255,1) 97%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+}
+.dropdown ul{
+     visibility: hidden;
+     position: absolute;
+     background: inherit;
+     width: inherit;
+     opacity: 0;
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     box-shadow: 0 0 18px #CCC;
+     -moz-box-shadow: 0 0 18px #CCC;
+     -webkit-box-shadow: 0 0 18px #CCC;
+     -o-box-shadow: 0 0 18px #CCC;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+.dropdown ul li{
+    min-height: 16px;
+    padding: 5px 13px;
+    cursor: pointer;
+}
+.dropdown ul li:hover{
+    background: #d9d9d9;
+}
+.dropdown ul li._active{
+    color: white;
+    background: #ccc;
+}
+.dropdown ul._shown{
+    visibility: visible;
+    opacity: 1;
+    z-index: 100;
+}
+
 /* jGrowl */
 
 div.jGrowl {

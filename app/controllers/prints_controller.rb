@@ -9,6 +9,8 @@ class PrintsController < ApplicationController
     def create
         @new_print = Print.create :name => params[:name], :description => params[:desc], :cat => params[:cat], :print => params[:print]
         PrintsMailer.save_email.deliver
+
+
         if @new_print.save
 
             render :json => {'status' => 'true', 'data' => @new_print}
@@ -28,12 +30,21 @@ class PrintsController < ApplicationController
         end
     end
 
+    def getcats
+      @target = Print.select(:cat).uniq
+      render :json => @target
+    end
+
     def getone
         @target = Print.find(params[:id])
     end
 
-    def cat
-      @target = Print.where(:cat => params[:cat])
+    def list
+      if params[:cat] === 'All'  && params[:primary_color] === 'All'
+        @Prints = Print.all
+      else
+        @Prints = Print.filter_by_params(params)
+      end
     end
 
     def destroy

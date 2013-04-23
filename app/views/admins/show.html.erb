@@ -7,16 +7,68 @@
 
     <div class="c-centered">
 
-        <h2>P R I N T S
-            <select name="choose-cat" id="choose-cat-search">
-                <option value="All">All</option>
-                <option value="Nature">Nature</option>
-                <option value="Art">Art</option>
-                <option value="Icons">Icons</option>
-                <option value="Black & White">Black & White</option>
-            </select>
-            <div class="add-print _modal-open" data-target="add-print">Add print <span>+</span></div>
-        </h2>
+      <h2>P R I N T S
+
+        <div class="filter">
+          <div id="choose-cat" class="dropdown" data-value="All">
+            <div class="current">
+              <div class="_content">All</div>
+              <div class="caret"><i></i></div>
+            </div>
+            <input type="hidden"/>
+            <ul></ul>
+          </div>
+          <div id="choose-color" class="dropdown" data-value="All">
+            <div class="current">
+              <div class="_content">All</div>
+              <div class="caret"><i></i></div>
+            </div>
+            <input type="hidden"/>
+            <ul>
+              <li data-value="All">All</li>
+              <li data-value="white">
+                <div class="c-color" id="white"></div>
+              </li>
+              <li data-value="grey">
+                <div class="c-color" id="grey"></div>
+              </li>
+              <li data-value="black">
+                <div class="c-color" id="black"></div>
+              </li>
+              <li data-value="yellow">
+                <div class="c-color" id="yellow"></div>
+              </li>
+              <li data-value="orange">
+                <div class="c-color" id="orange"></div>
+              </li>
+              <li data-value="red">
+                <div class="c-color" id="red"></div>
+              </li>
+              <li data-value="green">
+                <div class="c-color" id="green"></div>
+              </li>
+              <li data-value="blue">
+                <div class="c-color" id="blue"></div>
+              </li>
+              <li data-value="violet">
+                <div class="c-color" id="violet"></div>
+              </li>
+              <li data-value="cream">
+                <div class="c-color" id="cream"></div>
+              </li>
+              <li data-value="pink">
+                <div class="c-color" id="pink"></div>
+              </li>
+              <li data-value="brown">
+                <div class="c-color" id="brown"></div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="add-print _modal-open" data-target="add-print">Add print <span>+</span></div>
+      </h2>
 
         <section class="prints">
             <div class="item">
@@ -51,23 +103,49 @@
             </div>
         </section>
 
-        <h2>O R D E R S</h2>
+        <h2>O R D E R S
+          <div class="controls">
+            <button class="radio all _active">All</button>
+            <button class="radio new">New</button>
+            <button class="radio progress">P</button>
+            <button class="radio done">done</button>
+          </div>
+        </h2>
 
         <section class="purchases">
-            <table>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
+          <table class="table table-hover">
+            <thead>
+            <tr>
+              <th>#</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Username</th>
+              <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>1</td>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+              <td>@twitter</td>
+            </tr>
+            </tbody>
+          </table>
         </section>
 
 
@@ -107,9 +185,23 @@
     <form id="edit-print-form" action="/prints/update" method="post">
 
       <input type="hidden" name="id" value="{{= id }}">
-      <input type="text" class="required" name="name" placeholder="{{= name }}"><br>
-      <input type="text" class="required" name="cat" list="cat-list" placeholder="{{= cat }}"><br>
-      <textarea name="desc" cols="30" rows="10" placeholder="{{= description }}"></textarea><br>
+      <input type="text" class="required" name="name" value="{{= name }}"><br>
+      <select name="color">
+        <option value="white">White</option>
+        <option value="grey">Grey</option>
+        <option value="black">Black</option>
+        <option value="yellow">Yellow</option>
+        <option value="orange">Orange</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="violet">Violet</option>
+        <option value="cream">Cream</option>
+        <option value="pink">Pink</option>
+        <option value="brown">Brown</option>
+      </select>
+      <input type="text" class="required" name="cat" list="cat-list" value="{{= cat }}"><br>
+      <textarea name="desc" cols="30" rows="10">{{= description }}</textarea><br>
       <input type="submit" value="Edit">
 
     </form>
@@ -123,6 +215,102 @@
     <input type="text" class="required" name="name" placeholder="Name"><br>
     <input type="file" class="required" name="print">
     <input type="text" class="required" name="cat" list="cat-list" placeholder="Category"><br>
+    <div class="colors">
+      <div id="choose-color" class="dropdown small" data-value="All">
+        <div class="current">
+          <div class="_content">All</div>
+          <div class="caret"><i></i></div>
+        </div>
+        <input type="hidden"/>
+        <ul>
+          <li data-value="All">All</li>
+          <li data-value="white">
+            <div class="c-color" id="white"></div>
+          </li>
+          <li data-value="grey">
+            <div class="c-color" id="grey"></div>
+          </li>
+          <li data-value="black">
+            <div class="c-color" id="black"></div>
+          </li>
+          <li data-value="yellow">
+            <div class="c-color" id="yellow"></div>
+          </li>
+          <li data-value="orange">
+            <div class="c-color" id="orange"></div>
+          </li>
+          <li data-value="red">
+            <div class="c-color" id="red"></div>
+          </li>
+          <li data-value="green">
+            <div class="c-color" id="green"></div>
+          </li>
+          <li data-value="blue">
+            <div class="c-color" id="blue"></div>
+          </li>
+          <li data-value="violet">
+            <div class="c-color" id="violet"></div>
+          </li>
+          <li data-value="cream">
+            <div class="c-color" id="cream"></div>
+          </li>
+          <li data-value="pink">
+            <div class="c-color" id="pink"></div>
+          </li>
+          <li data-value="brown">
+            <div class="c-color" id="brown"></div>
+          </li>
+
+        </ul>
+      </div>
+      <div id="choose-color" class="dropdown small h-no-margin-right" data-value="All">
+        <div class="current">
+          <div class="_content">All</div>
+          <div class="caret"><i></i></div>
+        </div>
+        <input type="hidden"/>
+        <ul>
+          <li data-value="All">All</li>
+          <li data-value="white">
+            <div class="c-color" id="white"></div>
+          </li>
+          <li data-value="grey">
+            <div class="c-color" id="grey"></div>
+          </li>
+          <li data-value="black">
+            <div class="c-color" id="black"></div>
+          </li>
+          <li data-value="yellow">
+            <div class="c-color" id="yellow"></div>
+          </li>
+          <li data-value="orange">
+            <div class="c-color" id="orange"></div>
+          </li>
+          <li data-value="red">
+            <div class="c-color" id="red"></div>
+          </li>
+          <li data-value="green">
+            <div class="c-color" id="green"></div>
+          </li>
+          <li data-value="blue">
+            <div class="c-color" id="blue"></div>
+          </li>
+          <li data-value="violet">
+            <div class="c-color" id="violet"></div>
+          </li>
+          <li data-value="cream">
+            <div class="c-color" id="cream"></div>
+          </li>
+          <li data-value="pink">
+            <div class="c-color" id="pink"></div>
+          </li>
+          <li data-value="brown">
+            <div class="c-color" id="brown"></div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
     <textarea name="desc" cols="30" rows="10" placeholder="Description"></textarea><br>
     <input type="submit" value="Add">
 
@@ -145,86 +333,124 @@
 
   <script type="text/javascript">
 
+    var printsCtrl = {
+        init: function(){
+            console.log('printsCrtl initialized!');
+            var self = this;
+            this.$el = $('.prints');
+            this.$cat_choose = $('#choose-cat');
+            this.$color_choose = $('#choose-color');
+            this.$el.on('click', '.delete', function(e){
+                console.log('delete fired');
+                self.deletePrint(e);
+            });
+            this.$cat_choose.on('dropdown:change', function(e){
+                self.getPrints();
+            });
+            this.$color_choose.on('dropdown:change', function(){
+                self.getPrints();
+            });
+            $('body').on('modal:open', function(){   //  Attach validation & ajax form
+                self.pluginsInit();            //  to dynamic elements.
+            });                                // Event is triggered in custom plugin
+            this.pluginsInit();
+            this.getPrints();
+            this.getCats();
 
-    var render = function(data){
-        var markup = [];
-        _.each(data, function(d){
-            markup.push(_.template($('#print-item-temp').html(), d));
-        });
-        $('.prints').html(markup.join(''));
-    }
-
-    var getPrints = function(){
-        var markup = [];
-        $.get('/prints.json', function(data){
-            render(data);
-        });
-    };
-
-    var printsCat = function(e){
-        var cat = $(e.target).val();
-        $.get('/prints/cat/' + cat + '.json', function(data){
-            render(data);
-        });
-    }
-
-    var deletePrint = function(e){
-        var target = $(e.target).data('id');
-        $.post('/prints/destroy/' + target, function(data){
-            if(data.status === 'true'){
-                $.jGrowl('Принт удален!', {theme: 'success'});
-            }else{
-                $.jGrowl('Творится какая-то хуйня!', {theme: 'error'});
+        },
+        render: function(data){
+            console.log('_render fired!');
+            var markup = [];
+            _.each(data, function(d){
+                markup.push(_.template($('#print-item-temp').html(), d));
+            });
+            this.$el.html(markup.join(''));
+        },
+        getPrints: function(){
+            console.log('_getPrints fired')
+            var cat = this.$cat_choose.data('value'),
+                color = $('#choose-color').data('value'),
+                markup = [],
+                self = this;
+            $.get('/prints/list/' + cat + '/' + color + '.json', function(data){
+                self.render(data);
+            });
+        },
+        getCats: function(){
+            console.log('_getCats init');
+            $.get('/prints/cat/getcat', function(data){
+                var markup = [];
+                _.each(data, function(d){
+                    markup.push('<li data-value="' + d.cat + '">' + d.cat + '</li>');
+                });
+                $('#choose-cat').find('ul').html('<li data-value="All">All</li>' + markup.join(''));
+            });
+        },
+        deletePrint: function(e){
+            var target = $(e.target).data('id'),
+                self = this;
+            if (confirm('Really?')) {
+                $.post('/prints/destroy/' + target, function (data) {
+                    if (data.status === 'true') {
+                        $.jGrowl('Принт удален!', {theme: 'success'});
+                        self.getPrints();
+                    } else {
+                        $.jGrowl('Творится какая-то хуйня!', {theme: 'error'});
+                    }
+                });
             }
-        })
+        },
+        pluginsInit: function(){
+            var self = this;
+            helpers();
+            $('.dropdown').dropdown();
+            $('.modal').modal();
+            $('#edit-print-form').validate({
+                errorClass: 'el_invalid',
+                validClass: 'el_valid'
+            });
+            $('#add-print-form').validate({
+                errorClass: 'el_invalid',
+                validClass: 'el_valid'
+            });
+            $('#edit-print-form').ajaxForm({
+                success: function(data){
+                    if(data.status === 'true')   {
+                        $.jGrowl('Принт редакирован!', {theme: 'success'});
+                        $('body').trigger('modal:close');
+                        self.getPrints();
+                        self.getCats();
+                    }else if(data.status === 'false'){
+                        $.jGrowl(data.data, {theme: 'error'});
+                    }
+                }  ,
+                error: function(){
+                    $.jGrowl('Творится какая-то хуйня!', {theme: 'error'});
+                }
+            });
+            $('#add-print-form').ajaxForm({
+                success: function(data){
+                    if(data.status === 'true')   {
+                        $.jGrowl('Принт сохранен!', {theme: 'success'});
+                        $('body').trigger('modal:close');
+                        self.getPrints();
+                        self.getCats();
+                    }else if(data.status === 'false'){
+                        $.jGrowl(data.data, {theme: 'error'});
+                    }
+                }  ,
+                error: function(){
+                    $.jGrowl('Творится какая-то хуйня!', {theme: 'error'});
+                }
+            });
+        }
     }
+
+
 
     $(function(){
 
-        $('.prints').on('click', '.delete', function(e){
-            console.log('fired')
-            deletePrint(e);
-        });
-
-        $('select').on('change', function(e){
-            console.log('fired')
-            printsCat(e);
-        })
-
-        getPrints();
-
-        $('#edit-print-form').validate({
-            errorClass: 'el_invalid',
-            validClass: 'el_valid'
-        });
-        $('#add-print-form').validate({
-            errorClass: 'el_invalid',
-            validClass: 'el_valid'
-        });
-        $('#edit-print-form').ajaxForm({
-            success: function(data){
-                if(data.status === 'true')   {
-                    $.jGrowl('Принт сохранен!', {theme: 'success'});
-                }else if(data.status === 'false'){
-                    $.jGrowl(data.data, {theme: 'error'});
-                }
-            }  ,
-            error: function(){
-                $.jGrowl('Творится какая-то хуйня!', {theme: 'error'});
-            }
-        });
-        $('#add-print-form').ajaxForm({
-            success: function(data){
-                if(data.status === 'true')   {
-                    $.jGrowl('Принт сохранен!', {theme: 'success'});
-                }else if(data.status === 'false'){
-                    $.jGrowl(data.data, {theme: 'error'});
-                }
-            }  ,
-            error: function(){
-                $.jGrowl('Творится какая-то хуйня!', {theme: 'error'});
-            }
-        });
+        printsCtrl.init();
 
     })
 

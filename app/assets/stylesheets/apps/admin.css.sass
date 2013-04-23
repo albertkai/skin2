@@ -1,6 +1,6 @@
 .admin
-  height: 100%
   background: url('/assets/large_leather.png')
+  padding-bottom: 20px
   .header
     height: 70px
     line-height: 70px
@@ -12,12 +12,53 @@
       font-size: 50px
       letter-spacing: 20px
       margin-right: -40px
+  #color-select
+    option
+      .color
+        width: 30px
+        height: 30px
+        border: 1px solid #ccc
+        display: inline-block
+        
   h2
     position: relative
     font-size: 40px
     margin: 30px
     color: white
     +text-shadow(#d9d9d9 0 5px 5px)
+    .filter
+      clear: both
+      width: 400px
+      position: absolute
+      top: 8px
+      left: 280px
+    .controls
+      position: absolute
+      height: 50px
+      top: 0
+      right: 0px
+      button
+        height: 50px
+        width: 50px
+        margin-left: 10px
+        border: 0
+        color: white
+        text-align: center
+        line-height: 50px
+        +opacity(.6)
+        +border-radius(25px)
+        +transition(all .4s ease )
+        &.all
+          background: #7fc9ff
+        &.progress
+          background: #fdff64
+        &.new
+          background: #ff746d
+        &.done
+          background: #77ff74
+        &._active, &:hover
+          +opacity(1)
+          +scale(1.2)
     .add-print
       position: absolute
       top: 0
@@ -55,6 +96,16 @@
     box-shadow: 0 5px 5px grey
     span
       font-size: 30px
+
+  .purchases
+    +box-shadow(#ccc 0 0 20px inset)
+    +border-radius(7px)
+    background: white
+    padding: 20px
+    overflow: hidden
+    overflow-y: scroll
+    height: 400px
+    margin-bottom: 30px
   .prints
     +box-shadow(#ccc 0 0 20px inset)
     +border-radius(7px)
@@ -72,6 +123,7 @@
       h4
         position: absolute
         height: 100%
+        width: 100%
         +opacity(0)
         +transition(all .4s ease)
         background: white
