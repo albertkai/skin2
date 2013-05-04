@@ -1,0 +1,55 @@
+.customizr
+  background: grey
+  min-height: 630px
+  padding-top: 77px
+  .constructor
+    position: absolute
+    height: 100%
+    left: 0
+    width: 46px
+    background: black
+    z-index: 100
+    +opacity(.5)
+    +transition(all .4s ease)
+    &:hover
+      width: 75px
+      +opacity(.6)
+    &._expanded, &._expanded:hover
+      width: 50%
+      text-align: center
+      +opacity(.8)
+  .shirt
+    height: 630px
+    width: 500px
+    background: #ccc
+    position: absolute
+    right: 0
+  .prints
+    width: 500px
+    height: 630px
+    position: absolute
+    background: #d9d9d9
+    .top-filter
+      width: 100%
+      height: 70px
+      position: absolute
+    .prints-cont
+      padding-top: 70px
+      .item
+        width: 130px
+        height: 170px
+        background: orange
+        float: left
+        margin: 10px 0 0 10px
+        position: relative
+        border: 2px solid white
+        +transition(all .4s ease)
+        &:hover
+          +box-shadow(white 0 0 15px)
+        h3
+          position: absolute
+          width: 100%
+          height: 100%
+        img
+          width: 100%
+          height: 100%

@@ -8,9 +8,6 @@
 
     onBeforeRender: ()->
       $(@.el).addClass('_start')
-      transitionEnd($(@.el)).bind ()=>
-        alert 'PolyfillWorks'
-        transitionEnd($(@.el)).unbind()
 
     onRender: ()->
       setTimeout =>

@@ -12,9 +12,7 @@
   App.addInitializer ->
     @module('FooterApp').start()
     @module('HeaderApp').start()
-    #@module('CustomizrApp').start()
 
   App.on 'initialize:after', ()->
-    console.log 'margarita'
-    Backbone.history.start()
+    Backbone.history.start(pushstate: true)
   App

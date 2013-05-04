@@ -2,9 +2,6 @@
 
   List.Controller =
     listHeader: ->
-      #headerView = @getHeaderView
-      #App.header.show headerView
-
-    getHeaderView: ()->
-      #new List.Header
+      headerView = new List.Header
+      App.header.show headerView
 

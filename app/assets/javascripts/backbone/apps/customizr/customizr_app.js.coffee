@@ -2,6 +2,9 @@
 
   CustomizrApp.controller =
     showCustomizr: ()->
-      cmzrLayout = new CustomizrApp.MainLayout
-      console.log cmzrLayout
-      App.main.show cmzrLayout
+      CustomizrApp.cmzrLayout = new CustomizrApp.MainLayout
+      App.main.show CustomizrApp.cmzrLayout
+      @showPrints()
+
+    showPrints: ()->
+      CustomizrApp.Prints.controller.showPrints()

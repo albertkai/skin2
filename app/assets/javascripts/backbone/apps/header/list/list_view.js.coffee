@@ -2,14 +2,6 @@
 
   class List.Header extends Marionette.ItemView
 
-      template: 'header/list/templates/_header'
-
-  class List.Headers extends Marionette.CompositeView
-
-      template: 'header/list/templates/list_header'
-
-      itemView: List.Header
-
-      itemViewContainer: 'ul'
+      template: 'header/list/templates/header'
 
       className: 'c-centered'
